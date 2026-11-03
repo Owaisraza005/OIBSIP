@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A simple and accurate temperature converter for Celsius, Fahrenheit and Kelvin.">
+
+    <title>TempConvert | Temperature Converter</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">Temp<span>Convert</span></a>
+
+            <span class="nav-label">Temperature Calculator</span>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-container">
+
+        <section class="converter-card">
+
+            <div class="heading">
+                <div class="temperature-icon">🌡️</div>
+
+                <span class="tag">SMART TEMPERATURE TOOL</span>
+
+                <h1>Temperature Converter</h1>
+
+                <p>
+                    Convert temperatures between Celsius,
+                    Fahrenheit and Kelvin instantly.
+                </p>
+            </div>
+
+            <!-- Converter Form -->
+            <form id="converterForm" novalidate>
+
+                <div class="form-group">
+                    <label for="temperature">
+                        Enter Temperature
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperature"
+                        placeholder="Enter temperature value"
+                        step="any"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="unit">
+                        Convert From
+                    </label>
+
+                    <select id="unit">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message"
+                     role="alert" aria-live="polite"></div>
+
+                <!-- Convert Button -->
+                <button type="submit" class="convert-btn">
+                    Convert Temperature →
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+
+            </form>
+
+            <!-- Results -->
+            <section class="results" id="results" aria-live="polite" hidden>
+
+                <h2>Conversion Results</h2>
+
+                <div class="result-grid">
+
+                    <div class="result-box">
+                        <span>Celsius</span>
+                        <h3 id="celsiusResult">-- °C</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span>Fahrenheit</span>
+                        <h3 id="fahrenheitResult">-- °F</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span>Kelvin</span>
+                        <h3 id="kelvinResult">-- K</h3>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="formula-info">
+                <h3>Conversion Formulas</h3>
+
+                <p>Celsius → Fahrenheit: (°C × 9/5) + 32</p>
+                <p>Fahrenheit → Celsius: (°F − 32) × 5/9</p>
+                <p>Celsius → Kelvin: °C + 273.15</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 TempConvert. Built with HTML, CSS & JavaScript.</p>
+        <p>Developed by Owais | Oasis Infobyte Internship</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

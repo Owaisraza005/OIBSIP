@@ -1,0 +1,356 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.header {
+    width: 100%;
+    background: #111c32;
+    border-bottom: 1px solid #26344d;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #3b82f6;
+}
+
+.nav-label {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.18),
+            transparent 35%
+        );
+}
+
+/* =========================
+   CONVERTER CARD
+========================= */
+
+.converter-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: #172554;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.temperature-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: block;
+    color: #60a5fa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heading h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.heading p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    outline: none;
+    background: #0f172a;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.convert-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.convert-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: 1px solid #475569;
+    border-radius: 9px;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-btn:hover {
+    background: #263b60;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+    display: none;
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.results {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #334155;
+}
+
+.results h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.result-box {
+    padding: 20px 10px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.result-box span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.result-box h3 {
+    color: #60a5fa;
+    font-size: 19px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   FORMULA INFORMATION
+========================= */
+
+.formula-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #1e3a8a;
+    border-radius: 12px;
+}
+
+.formula-info h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.formula-info p {
+    color: #dbeafe;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #080f1e;
+    text-align: center;
+    padding: 22px 15px;
+    border-top: 1px solid #26344d;
+}
+
+.footer p {
+    color: #94a3b8;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-label {
+        font-size: 11px;
+    }
+
+    .main-container {
+        padding: 35px 15px;
+    }
+
+    .converter-card {
+        padding: 25px 18px;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-box {
+        padding: 17px;
+    }
+
+    .result-box h3 {
+        font-size: 22px;
+    }
+
+    .formula-info {
+        padding: 15px;
+    }
+
+}
